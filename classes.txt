@@ -1,0 +1,8 @@
+__background__
+person
+bicycle
+car
+motorcycle
+bus
+train
+truck
