@@ -24,37 +24,33 @@ You can install the required dependencies using the following command:
 
 ```bash
 pip install torch torchvision opencv-python pandas scikit-learn cvzone
-## Project Structure
 
-```bash
 vehicle-detection-traffic-estimation/
 │
 ├── vehicle_data.csv            # Example dataset for training the regression model
 ├── classes.txt                 # Contains the class names (e.g., vehicle types)
 ├── main.py                     # Main script for detection and time estimation
 ├── README.md                   # Project documentation
-└── requirements.txt            # List of dependencies
+└── requirements.txt
 
-## Usage
-
-### 1. Vehicle Detection
-
+Usage
+1. Vehicle Detection
 The project detects vehicles in an image or video feed using the Faster R-CNN model. Detected vehicles are categorized, counted, and annotated with bounding boxes on the image.
 
 Run the main script:
 
-```bash
+bash
+Copy code
 python main.py
-### 2. Traffic Signal Time Estimation
+2. Traffic Signal Time Estimation
+Using the vehicle_data.csv, the project trains a linear regression model to estimate the time needed for vehicles to pass a traffic signal based on the number of detected vehicles in each category.
 
-Using the `vehicle_data.csv`, the project trains a linear regression model to estimate the time needed for vehicles to pass a traffic signal based on the number of detected vehicles in each category.
+3. Example CSV Data
+The vehicle_data.csv contains data with the following columns:
 
-### 3. Example CSV Data
-
-The `vehicle_data.csv` contains data with the following columns:
-- `car_count`
-- `truck_count`
-- `bike_count`
-- `ambulance_count`
-- `other_vehicles_count`
-- `time_to_pass`
+car_count
+truck_count
+bike_count
+ambulance_count
+other_vehicles_count
+time_to_pass
